@@ -1,8 +1,8 @@
 #!/bin/bash
 
 SRC_DIR=.
-DST_DIR_MD=..
-DST_DIR_RSS=../../blog/rss
+DST_DIR_MD=../public
+DST_DIR_RSS=../blog/rss
 
 declare -a list_types=(books concerts crashes exhibitions hikes movies plays trips)
 
