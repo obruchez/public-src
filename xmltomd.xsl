@@ -139,6 +139,30 @@
         <xsl:text>&#xa;</xsl:text>
     </xsl:template>
 
+    <xsl:template match="lists">
+        <xsl:text># About / profile&#xa;</xsl:text>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:text>I'm a geek. I like lists. So this is me. In lists.&#xa;</xsl:text>
+        <xsl:for-each select="list">
+            <xsl:call-template name="list"/>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template name="list">
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:text>## </xsl:text>
+        <xsl:value-of select="@title"/>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:for-each select="item">
+            <xsl:text>* [</xsl:text>
+            <xsl:value-of select="."/>
+            <xsl:text>](</xsl:text>
+            <xsl:value-of select="@url"/>
+            <xsl:text>)&#xa;</xsl:text>
+        </xsl:for-each>
+    </xsl:template>
+
     <xsl:template match="movies">
         <xsl:text># Movies</xsl:text>
         <xsl:text>&#xa;</xsl:text>

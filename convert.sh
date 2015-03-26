@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SRC_DIR=.
-DST_DIR_MD=../public/lists
+DST_DIR_MD=../public/Lists
 DST_DIR_RSS=../blog/rss
 
 declare -a list_types=(books concerts crashes exhibitions hikes movies plays trips)
@@ -14,3 +14,6 @@ do
   saxon -s:$SRC_DIR/$list_type.xml -xsl:$SRC_DIR/xmltomd.xsl > $DST_DIR_MD/$base_md_filename.md
   saxon -s:$SRC_DIR/$list_type.xml -xsl:$SRC_DIR/xmltorss.xsl > $DST_DIR_RSS/$base_rss_filename.rss
 done
+
+echo "Generating about/profile MD file..."
+saxon -s:$SRC_DIR/about.xml -xsl:$SRC_DIR/xmltomd.xsl > ../public/Introspection/About.md
