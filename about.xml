@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <lists title="About / profile (Olivier Bruchez)" link="https://github.com/obruchez/public/blob/master/Introspection/About.md">
+    <introduction>I'm a geek. I like lists. So this is me. In lists.</introduction>
     <list title="Activities">
         <item url="https://en.wikipedia.org/wiki/Blogging">Blogging</item>
         <item url="https://en.wikipedia.org/wiki/Theatre">Going to the theater</item>

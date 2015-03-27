@@ -142,7 +142,8 @@
     <xsl:template match="lists">
         <xsl:text># About / profile&#xa;</xsl:text>
         <xsl:text>&#xa;</xsl:text>
-        <xsl:text>I'm a geek. I like lists. So this is me. In lists.&#xa;</xsl:text>
+        <xsl:value-of select="introduction"/>
+        <xsl:text>&#xa;</xsl:text>
         <xsl:for-each select="list">
             <xsl:call-template name="list"/>
         </xsl:for-each>
