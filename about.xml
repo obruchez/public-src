@@ -34,17 +34,34 @@
         <item url="https://en.wikipedia.org/wiki/Wine">Wine</item>
     </list>
     <list title="Interests">
-        <item url="https://en.wikipedia.org/wiki/Machine_learning">Artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) / [machine learning</item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/Artificial_intelligence">Artificial intelligence</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Machine_learning">Machine learning</subitem>
+        </item>
         <item url="https://en.wikipedia.org/wiki/Astronomy">Astronomy</item>
         <item url="https://en.wikipedia.org/wiki/Futures_studies">Futures studies (a.k.a. futurology / futurism)</item>
         <item url="https://en.wikipedia.org/wiki/Getting_Things_Done">Getting Things Done (GTD)</item>
         <item url="https://en.wikipedia.org/wiki/Jazz">Jazz</item>
-        <item url="https://en.wikipedia.org/wiki/Coursera">MOOCs](https://en.wikipedia.org/wiki/Mooc) / [Coursera</item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/Mooc">MOOCs</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Coursera">Coursera</subitem>
+        </item>
         <item url="https://en.wikipedia.org/wiki/Philosophy">Philosophy</item>
-        <item url="https://en.wikipedia.org/wiki/Scala_(programming_language)">Programming](https://en.wikipedia.org/wiki/Computer_programming) / [software development](https://en.wikipedia.org/wiki/Software_development) / [functional programming](https://en.wikipedia.org/wiki/Functional_programming) / [Scala</item>
-        <item url="https://en.wikipedia.org/wiki/Lifelog">Quantified Self](https://en.wikipedia.org/wiki/Quantified_Self) / [lifelogging</item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/Computer_programming">Programming</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Software_development">Software development</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Functional_programming">Functional programming</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Scala_(programming_language)">Scala</subitem>
+        </item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/Quantified_Self">Quantified Self</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Lifelog">Lifelogging</subitem>
+        </item>
         <item url="https://en.wikipedia.org/wiki/Science">Science</item>
-        <item url="https://en.wikipedia.org/wiki/Computer">Technology](https://en.wikipedia.org/wiki/Technology) / [computers</item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/Technology">Technology</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Computer">computers</subitem>
+        </item>
     </list>
     <list title="Musicians">
         <item url="https://en.wikipedia.org/wiki/Prince_(musician)">Prince</item>
@@ -54,7 +71,11 @@
         <item url="https://en.wikipedia.org/wiki/Bj%C3%B6rk">Björk</item>
         <item url="https://en.wikipedia.org/wiki/Brad_Mehldau">Brad Mehldau</item>
         <item url="https://en.wikipedia.org/wiki/Camille_(singer)">Camille</item>
-        <item url="https://en.wikipedia.org/wiki/Funkadelic">George Clinton](https://en.wikipedia.org/wiki/George_Clinton_(musician)) / [Parliament](https://en.wikipedia.org/wiki/Parliament_(band)) / [Funkadelic</item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/George_Clinton_(musician)">George Clinton</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Parliament_(band)">Parliament</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/Funkadelic">Funkadelic</subitem>
+        </item>
         <item url="https://en.wikipedia.org/wiki/Kenny_Garrett">Kenny Garrett</item>
         <item url="https://en.wikipedia.org/wiki/Herbie_Hancock">Herbie Hancock</item>
         <item url="https://en.wikipedia.org/wiki/Jack_DeJohnette">Jack DeJohnette</item>
@@ -71,7 +92,10 @@
         <item url="https://en.wikipedia.org/wiki/Neneh_Cherry">Neneh Cherry</item>
         <item url="https://en.wikipedia.org/wiki/Queen_(band)">Queen</item>
         <item url="https://en.wikipedia.org/wiki/Radiohead">Radiohead</item>
-        <item url="https://en.wikipedia.org/wiki/The_Police">Sting](https://en.wikipedia.org/wiki/Sting_(musician)) / [The Police</item>
+        <item>
+            <subitem url="https://en.wikipedia.org/wiki/Sting_(musician)">Sting</subitem>
+            <subitem url="https://en.wikipedia.org/wiki/The_Police">The Police</subitem>
+        </item>
         <item url="https://en.wikipedia.org/wiki/Wayne_Shorter">Wayne Shorter</item>
         <item url="https://en.wikipedia.org/wiki/The_White_Stripes">The White Stripes</item>
         <item url="https://en.wikipedia.org/wiki/Yaron_Herman">Yaron Herman</item>

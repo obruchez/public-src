@@ -156,11 +156,29 @@
         <xsl:text>&#xa;</xsl:text>
         <xsl:text>&#xa;</xsl:text>
         <xsl:for-each select="item">
-            <xsl:text>* [</xsl:text>
-            <xsl:value-of select="."/>
-            <xsl:text>](</xsl:text>
-            <xsl:value-of select="@url"/>
-            <xsl:text>)&#xa;</xsl:text>
+            <xsl:text>* </xsl:text>
+            <xsl:choose>
+                <xsl:when test="count(subitem) = 0">
+                    <xsl:text>[</xsl:text>
+                    <xsl:value-of select="."/>
+                    <xsl:text>](</xsl:text>
+                    <xsl:value-of select="@url"/>
+                    <xsl:text>)</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:for-each select="subitem">
+                        <xsl:text>[</xsl:text>
+                        <xsl:value-of select="."/>
+                        <xsl:text>](</xsl:text>
+                        <xsl:value-of select="@url"/>
+                        <xsl:text>)</xsl:text> 
+                        <xsl:if test="position()!=last()">
+                            <xsl:text> / </xsl:text>   
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>&#xa;</xsl:text>
         </xsl:for-each>
     </xsl:template>
 
