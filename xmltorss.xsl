@@ -221,7 +221,7 @@
         <rss version="2.0">
             <channel>
                 <title><xsl:value-of select="@title"/></title>
-                <description><xsl:value-of select="@description"/></description>
+                <description><xsl:value-of select="@title"/></description>
                 <link><xsl:value-of select="@link"/></link>
                 <xsl:copy-of select="$contents"/>
             </channel>
