@@ -16,4 +16,7 @@ do
 done
 
 echo "Generating about/profile MD file..."
-saxon -s:$SRC_DIR/about.xml -xsl:$SRC_DIR/xmltomd.xsl > ../public/Introspection/About.md
+saxon -s:$SRC_DIR/profile.xml -xsl:$SRC_DIR/xmltomd.xsl > ../public/Introspection/About.md
+
+echo "Generating worldview MD file..."
+saxon -s:$SRC_DIR/worldview.xml -xsl:$SRC_DIR/xmltomd.xsl > ../public/Introspection/Worldview.md

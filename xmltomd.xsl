@@ -139,49 +139,6 @@
         <xsl:text>&#xa;</xsl:text>
     </xsl:template>
 
-    <xsl:template match="lists">
-        <xsl:text># About / profile&#xa;</xsl:text>
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:value-of select="introduction"/>
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:for-each select="list">
-            <xsl:call-template name="list"/>
-        </xsl:for-each>
-    </xsl:template>
-
-    <xsl:template name="list">
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:text>## </xsl:text>
-        <xsl:value-of select="@title"/>
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:for-each select="item">
-            <xsl:text>* </xsl:text>
-            <xsl:choose>
-                <xsl:when test="count(subitem) = 0">
-                    <xsl:text>[</xsl:text>
-                    <xsl:value-of select="."/>
-                    <xsl:text>](</xsl:text>
-                    <xsl:value-of select="@url"/>
-                    <xsl:text>)</xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:for-each select="subitem">
-                        <xsl:text>[</xsl:text>
-                        <xsl:value-of select="."/>
-                        <xsl:text>](</xsl:text>
-                        <xsl:value-of select="@url"/>
-                        <xsl:text>)</xsl:text> 
-                        <xsl:if test="position()!=last()">
-                            <xsl:text> / </xsl:text>   
-                        </xsl:if>
-                    </xsl:for-each>
-                </xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>&#xa;</xsl:text>
-        </xsl:for-each>
-    </xsl:template>
-
     <xsl:template match="movies">
         <xsl:text># Movies</xsl:text>
         <xsl:text>&#xa;</xsl:text>
@@ -250,6 +207,49 @@
         <xsl:text>&#xa;</xsl:text>
     </xsl:template>
 
+    <xsl:template match="profile">
+        <xsl:text># About / profile&#xa;</xsl:text>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:value-of select="introduction"/>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:for-each select="list">
+            <xsl:call-template name="list"/>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template name="list">
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:text>## </xsl:text>
+        <xsl:value-of select="@title"/>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:for-each select="item">
+            <xsl:text>* </xsl:text>
+            <xsl:choose>
+                <xsl:when test="count(subitem) = 0">
+                    <xsl:text>[</xsl:text>
+                    <xsl:value-of select="."/>
+                    <xsl:text>](</xsl:text>
+                    <xsl:value-of select="@url"/>
+                    <xsl:text>)</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:for-each select="subitem">
+                        <xsl:text>[</xsl:text>
+                        <xsl:value-of select="."/>
+                        <xsl:text>](</xsl:text>
+                        <xsl:value-of select="@url"/>
+                        <xsl:text>)</xsl:text> 
+                        <xsl:if test="position()!=last()">
+                            <xsl:text> / </xsl:text>   
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>&#xa;</xsl:text>
+        </xsl:for-each>
+    </xsl:template>
+
     <xsl:template match="trips">
         <xsl:text># Trips</xsl:text>
         <xsl:text>&#xa;</xsl:text>
@@ -272,6 +272,42 @@
         <xsl:text> | </xsl:text>
         <xsl:call-template name="pictures"/>
         <xsl:text>&#xa;</xsl:text>
+    </xsl:template>
+
+   <xsl:template match="worldview">
+        <xsl:text># Vision du monde&#xa;</xsl:text>
+        <xsl:for-each select="category">
+            <xsl:text>&#xa;</xsl:text> 
+            <xsl:text>## </xsl:text>
+            <xsl:value-of select="@description"/>
+            <xsl:text>&#xa;</xsl:text> 
+            <xsl:for-each select="position"> 
+                <xsl:text>&#xa;</xsl:text> 
+                <xsl:text>##### </xsl:text>
+                <xsl:value-of select="@summary"/>
+                <xsl:text>&#xa;&#xa;</xsl:text>   
+                <xsl:value-of select="."/>
+                <xsl:text>&#xa;</xsl:text>  
+            </xsl:for-each> 
+        </xsl:for-each>
+        <xsl:text>&#xa;## Références générales&#xa;&#xa;</xsl:text> 
+        <xsl:for-each select="references/reference">
+            <xsl:text>* </xsl:text>    
+            <xsl:value-of select="."/>
+            <xsl:text>&#xa;</xsl:text>  
+        </xsl:for-each>     
+        <xsl:text>&#xa;## Thèmes à ajouter&#xa;&#xa;</xsl:text> 
+        <xsl:for-each select="themesToAdd/theme">
+            <xsl:text>* </xsl:text>    
+            <xsl:value-of select="."/>
+            <xsl:text>&#xa;</xsl:text>  
+        </xsl:for-each>  
+        <xsl:text>&#xa;## Idées à ajouter&#xa;&#xa;</xsl:text> 
+        <xsl:for-each select="ideasToAdd/idea">
+            <xsl:text>* </xsl:text>    
+            <xsl:value-of select="."/>
+            <xsl:text>&#xa;</xsl:text>  
+        </xsl:for-each> 
     </xsl:template>
 
     <xsl:template name="anchor">
